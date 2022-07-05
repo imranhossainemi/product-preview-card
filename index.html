@@ -17,6 +17,93 @@
       margin: 0px;
       padding: 0px;
     }
+    .main{
+      max-width: 1440px;
+      height: 720px;
+      background-color: hsl(30,38%,92%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cart{
+      width: 600px;
+      height: 450px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      background-color: hsl(0, 0%, 100%);
+      background-image: url(images/image-product-desktop.jpg);
+      background-position: left;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .prodSec{
+      width: 300px;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .prodSec>*{
+      margin: 0px 30px;
+    }
+    .prodSec>h3{
+      color: hsl(228,12%,48%);
+      font-size: 14px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-family: 'Montserrat',serif;
+    }
+    .prodSec>h1{
+      font-size: 28px;
+      color: hsl(212, 21%, 14%);
+      font-weight: 700;
+      line-height: 30px;
+      font-family: 'Fraunces',sans-serif;
+    }
+    .prodSec>p{
+      color: hsl(228,12%,48%);
+      font-size: 14px;
+      font-family: 'Montserrat',serif;
+    }
+    .price{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 200px;
+    }
+    .price>h1{
+      color: hsl(158,36%,37%);
+      font-size: 28px;
+      font-family: 'Fraunces',sans-serif;
+    }
+    .price>p{
+      color: hsl(228,12%,48%);
+      font-size: 14px;
+    }
+    .cartButton{
+      width: 220px;
+      height: 50px;
+      background-color: hsl(158,36%,37%);
+      border-radius: 5px;
+      text-align: center;
+      color: hsl(0, 0%, 100%);
+    }
+    .cartButton>p>img{
+      margin-right: 5px;
+    }
+    @media screen and (max-width:600px) {
+      .cart{
+        width: 350px;
+        height: 700px;
+        flex-direction: column;
+        justify-content: end;
+        background-image: url(images/image-product-mobile.jpg);
+        background-position: top;
+      }
+    }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
@@ -24,17 +111,14 @@
 <body>
   <section class="main">
     <div class="cart">
-      <div class="prodImg">
-        <img src="images/image-product-desktop.jpg" alt="Product Image">
-      </div>
       <div class="prodSec">
-        <h3>Preview</h3>
+        <h3>Perfume</h3>
         <h1>Gabrielle Essence Eau De Parfum</h1>
         <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
   Perfumer-Creator for the House of CHANEL.</p>
         <div class="price">
           <h1>$149.99</h1>
-          <p>$169.99</p>
+          <p><del>$169.99</del></p>
         </div>
         <div class="cartButton">
           <p><img src="images/icon-cart.svg" alt="cart icon"> Add to Cart </p>
